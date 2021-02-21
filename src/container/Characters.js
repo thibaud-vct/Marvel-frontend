@@ -12,7 +12,7 @@ const Characters = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:3100?page=${paging}&search=${search}`
+                    `https://marvel-api-vct.herokuapp.com?page=${paging}&search=${search}`
                 );
                 getDataCharacter(response.data);
                 getIsLoading(false);
