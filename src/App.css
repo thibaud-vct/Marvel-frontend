@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Marvel&display=swap");
+
+body {
+    font-family: "Marvel", sans-serif;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.isLoading {
+    height: 100vh;
+}
+.characters {
+    background-color: #ee1c24;
+}
+.comics {
+    background-color: #333;
+    color: White;
+}
+.decrisptionWhite {
+    color: black;
+}
+.favorites {
+    background-color: #ccc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sectionCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 60px 0;
+}
+.sectionCard input {
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: "Marvel", sans-serif;
+    background-color: transparent;
+    padding: 0 10px;
+    font-size: 1.5rem;
+    width: 80vw;
+    height: 40px;
+    outline: none;
+    text-align: center;
+}
+.sectionCard input::placeholder {
+    color: black;
+    text-align: center;
+}
+.sectionCard > div > button {
+    background: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    font-family: "Marvel", sans-serif;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    color: #ccc;
+    border: 2px solid #ccc;
+}
+.sectionCard > div > button:hover {
+    box-shadow: 0px 0px 10px rgb(242, 243, 169);
+}
+.sectionCard > div > button:first-child {
+    margin-right: 150px;
+}
+.sectionCard > div > button:last-child {
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ___________ HEADER __________ */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+header > div:first-child {
+    display: flex;
+    justify-content: center;
+}
+header > div:last-child {
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+header > div > img {
+    width: 100vw;
+}
+header > div > a {
+    height: 70px;
+    width: 33vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0;
+    font-size: 4vw;
+    font-size: 2rem;
+}
+header > div > a > img {
+    height: 40px;
+    margin-left: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* _________ THE CARDS _________ */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin: 20px;
+    transition: transform 500ms;
 }
-
-.App-link {
-  color: #61dafb;
+.card:hover {
+    transform: translateY(-5px);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card > img:first-child {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    transition: transform 250ms;
+}
+.card > img:first-child:hover {
+    transform: transitionY(-10px);
+}
+.card > span {
+    margin: 20px;
+    text-align: center;
+}
+.description {
+    position: absolute;
+    background-color: white;
+    color: #333;
+    top: 200px;
+    padding: 10px;
+    width: 250px;
+    overflow: hidden;
+}
+.like {
+    margin-left: 150px;
+    margin-top: -50px;
+    margin-bottom: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    object-fit: cover;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
 }
